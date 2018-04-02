@@ -6,8 +6,8 @@ namespace RefactoringExample {
         public string Password { get; set; }
 
         public bool ValidatePassword(string inPassword) {
-            var temp = inPassword == Password;
-            return temp && DateTime.Now.Month == 4;
+            var rename = inPassword == Password;
+            return rename && DateTime.Now.Month == 4;
         }
     }
 }
