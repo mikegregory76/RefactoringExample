@@ -1,10 +1,13 @@
-﻿namespace RefactoringExample {
+﻿using System;
+
+namespace RefactoringExample {
     public class ActiveDirectoryUser {
         public string Username { get; set; }
         public string Password { get; set; }
 
         public bool ValidatePassword(string inPassword) {
-            return inPassword == Password;
+            var temp = inPassword == Password;
+            return temp && DateTime.Now.Month == 4;
         }
     }
 }
